@@ -4,7 +4,8 @@
     color: var(--laranja);
     font-size: 1.8rem;
     font-weight: 700;
-    padding: 1.6rem 0 0.8rem 0;
+    padding: 1.8rem 0 0.8rem 0;
+    background-color: var(--branco);
 }
 
 .swiper-slide img {
@@ -36,6 +37,7 @@
 }
 .card__descricao{
     margin-bottom: 0.8rem;
+    gap: 1.5rem;
 }
 .descricao__titulo{
     color: var(--laranja);
@@ -63,4 +65,7 @@
     color: var(--branco);
     padding: 1.6rem 3.3rem;
     text-decoration: none;
+}
+.descricao__avaliacao{
+    margin-bottom: 0.8rem;
 }
