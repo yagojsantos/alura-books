@@ -1,7 +1,8 @@
-@import url("../styles/header.css");
+/* @import url("../styles/header.css");
 @import url("../styles/banner.css");
 @import url("../styles/carrossel.css");
 @import url("../styles/topicos.css");
+@import url("../styles/contato.css"); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
@@ -19,4 +20,265 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1.6rem;
     font-weight: 400;
+}
+
+/* HEADER */
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__botao {
+    display: none;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background: url(../img/Menu.svg) no-repeat center;
+    display: inline-block;
+    margin: 1.6rem 2.4rem;
+}
+.container__img {
+    padding: 0.8rem;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Com este valor a lista fica exatamente abaixo do cabeçalho já que ele é o unico elemento relativo. Então deste jeito é pego a altura total do cabeçalho e passado como parâmetro para o afastamento do topo, dando este efeito de estar embaixo do cabeçalho. */
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1.6rem;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* BANNER */
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 4rem 3.2rem;
+}
+
+.banner__titulo {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.banner__texto {
+    font-weight: 500;
+    margin: 1.6rem 0;
+}
+
+.banner__pesquisa {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1rem 2.4rem;
+    width: 100%;
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--branco);
+    background: url("../img/Pesquisa.svg") no-repeat;
+    background-position: 1.6rem;
+}
+
+/* CARROSSEL */
+.carrossel__titulo {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--laranja);
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.8rem 0 0.8rem 0;
+    background-color: var(--branco);
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 0.8rem 0;
+}
+
+.card {
+    background: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1.6rem;
+    padding: 1.6rem;
+}
+
+.card__descricao,
+.card__botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__descricao {
+    margin-bottom: 0.8rem;
+    gap: 1.5rem;
+}
+
+.descricao__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.descricao__titulo-livro {
+    font-size: 1.8rem;
+    color: var(--azul);
+    font-weight: 700;
+    margin: 0.8rem 0;
+}
+
+.descricao__texto {
+    font-size: 1.4rem;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes__item {
+    margin: 0 0.8rem;
+    cursor: pointer;
+}
+
+.botoes__ancora {
+    background-color: var(--laranja);
+    font-weight: 700;
+    color: var(--branco);
+    padding: 1.6rem 3.3rem;
+    text-decoration: none;
+}
+
+.descricao__avaliacao {
+    margin-bottom: 0.8rem;
+}
+
+/* TÓPICOS */
+.topicos {
+    background: var(--azul-degrade);
+    padding: 2.4rem;
+    text-align: center;
+}
+
+.topicos__titulo {
+    color: var(--branco);
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+}
+
+.topicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.topicos__item {
+    padding: 1.6rem 2.4rem;
+    background-color: var(--laranja);
+}
+
+.topicos__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+/* CONTATOS */
+.contato {
+    padding: 2.4rem;
+    background-color: var(--branco);
+}
+
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contato__titulo {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.contato__texto {
+    font-weight: 300;
+    margin: 0.8rem 0 2.4rem;
+}
+
+.contato__email {
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    padding: 1.6rem;
+    color: var(--azul);
+}
+
+.contato__email::placeholder {
+    color: var(--azul);
+    background: url(../img/Email.svg) no-repeat;
+    background-position: 1.6rem;
+    text-align: center;
+}
+hr{
+    margin: 0;
+}
+/* RODAPE */
+.rodape{
+    background-color: var(--branco);
+    padding: 2.4rem;
+}
+.rodape__titulo{
+
 }
