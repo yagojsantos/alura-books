@@ -1,9 +1,5 @@
-/* @import url("../styles/header.css");
-@import url("../styles/banner.css");
-@import url("../styles/carrossel.css");
-@import url("../styles/topicos.css");
-@import url("../styles/contato.css"); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 :root {
     font-size: 62.5%;
@@ -11,7 +7,9 @@
     --branco: #FFFFFF;
     --laranja: #EB9B00;
     --azul: #002F52;
+    --preto: #000000;
     --fonte-principal: "Poppins";
+    --fonte-secundaria: 'Josefin Sans', sans-serif;
     --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
 }
 
@@ -35,6 +33,9 @@ body {
     display: flex;
     align-items: center;
 }
+.container__titulo{
+    display: none;
+}
 
 .container__botao {
     display: none;
@@ -47,6 +48,7 @@ body {
     display: inline-block;
     margin: 1.6rem 2.4rem;
 }
+
 .container__img {
     padding: 0.8rem;
 }
@@ -62,6 +64,7 @@ body {
 .container__botao:checked~.lista-menu {
     display: block;
 }
+
 .lista-menu__titulo,
 .lista-menu__item {
     padding: 1.6rem;
@@ -81,7 +84,9 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-
+.opcoes{
+    display: none;
+}
 /* BANNER */
 .banner {
     background: var(--azul-degrade);
@@ -271,14 +276,42 @@ body {
     background-position: 1.6rem;
     text-align: center;
 }
-hr{
+
+hr {
     margin: 0;
 }
+
 /* RODAPE */
-.rodape{
+.rodape {
     background-color: var(--branco);
     padding: 2.4rem;
 }
-.rodape__titulo{
-
+@media screen and (min-width: 1024px){
+    /* HEADER */
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 3rem;
+        display: inline-block;
+    }
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+    .container__titulo{
+        font-weight: 400;
+    }
+    .opcoes{
+        display: flex;
+        gap: 1.6rem;
+    }
+    .opcoes__item{
+        text-transform: uppercase;
+    }
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .container__img-favoritos, .cabecalho__menu-hamburguer{
+        display: none;
+    }
+    
 }
