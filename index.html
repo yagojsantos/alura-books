@@ -43,12 +43,33 @@
             </h1>
         </div>
         <ul class="opcoes">
-            <li class="opcoes__item">CATEGORIAS</li>
+            <input type="checkbox" id="opcoes-menu" class="opcoes__botao">
+            <label for="opcoes-menu">
+                <li class="opcoes__item">CATEGORIAS</li>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-end</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrututra</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
             <li class="opcoes__item"><a href="#" class="opcoes__link">FAVORITOS</a></li>
             <li class="opcoes__item"><a href="#" class="opcoes__link">MINHA ESTANTE</a></li>
         </ul>
         <div class="container">
-            <a href="#"><img src="./src/assets/img/Favoritos.svg" alt="Meus favoritos" class="container__img container__img-favoritos"></a>
+            <a href="#"><img src="./src/assets/img/Favoritos.svg" alt="Meus favoritos"
+                    class="container__img container__img-favoritos"></a>
             <a href="#"><img src="./src/assets/img/Compras.svg" alt="Carrinho de compras" class="container__img"></a>
             <a href="#"><img src="./src/assets/img/Usuário.svg" alt="Meu perfil" class="container__img"></a>
         </div>
@@ -171,8 +192,10 @@
         </ul>
     </section>
     <section class="contato">
-        <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-        <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        <div class="contato__descricao">
+            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+            <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        </div>
         <input class="contato__email" type="email" placeholder="Cadastre seu e-mail">
     </section>
     <hr />
