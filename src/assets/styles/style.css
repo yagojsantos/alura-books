@@ -8,6 +8,8 @@
     --laranja: #EB9B00;
     --azul: #002F52;
     --preto: #000000;
+    --cinza-claro: #858585;
+    --cinza-escuro:#474646;
     --fonte-principal: "Poppins";
     --fonte-secundaria: 'Josefin Sans', sans-serif;
     --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
@@ -289,6 +291,9 @@ hr {
     background-color: var(--branco);
     padding: 2.4rem;
 }
+.lista-rodape{
+    display: none;
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -435,5 +440,36 @@ hr {
     .contato__email::placeholder{
         font-size: 1.6rem;
         background-position: 2.4rem;
+    }
+    /* RODAPE */
+    .rodape{
+        display: flex;
+        padding: 5.6rem 0 7rem 0;
+        justify-content: space-around;
+    }
+    .rodape__titulo{
+        font-size: 2.4rem;
+    }
+    .lista-rodape{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+    .lista-rodape>.lista-rodape__titulo{
+        margin-bottom: 2.5rem;
+    }
+    .lista-rodape__titulo{
+        font-size: 1.4rem;
+        color: var(--cinza-claro);
+    }
+    .lista-rodape__item{
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    .lista-rodape__link{
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: var(--cinza-escuro);
     }
 }
