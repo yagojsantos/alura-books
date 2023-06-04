@@ -55,7 +55,9 @@ body {
 .container__img {
     padding: 0.8rem;
 }
-
+.container__texto{
+    display: none;
+}
 .lista-menu {
     display: none;
     position: absolute;
@@ -312,7 +314,6 @@ hr {
     .container__titulo {
         font-weight: 400;
     }
-
     .opcoes {
         display: flex;
         gap: 1.6rem;
@@ -471,5 +472,28 @@ hr {
         text-decoration: none;
         font-size: 1.4rem;
         color: var(--cinza-escuro);
+    }
+}
+@media screen and (min-width: 1728px){
+    /* HEADER */
+    .cabecalho{
+        padding: 0 8rem;
+    }
+    .container__titulo{
+        margin-right: 5.7rem;
+    }
+    .container__link{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        text-decoration: none;
+    }
+    .container__texto{
+        display: block;
+        font-size: 2rem;
+        color: var(--preto);
+    }
+    .opcoes{
+        margin-right: auto;/* quando temos um item-flex e utilizamos o margin(qualquer direção), com o valor auto, a margin tentara preencher todo o espaço disponivel enviando os item para o lado oposto o da direção declarada */
     }
 }
