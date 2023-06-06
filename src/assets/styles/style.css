@@ -9,7 +9,7 @@
     --azul: #002F52;
     --preto: #000000;
     --cinza-claro: #858585;
-    --cinza-escuro:#474646;
+    --cinza-escuro: #474646;
     --fonte-principal: "Poppins";
     --fonte-secundaria: 'Josefin Sans', sans-serif;
     --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
@@ -43,7 +43,12 @@ body {
 .container__botao {
     display: none;
 }
-
+.container__botao:checked + .container__rotulo > .cabecalho__menu-hamburguer{
+    background: url(../img/Menu\ Aberto.png) no-repeat center;
+}
+.container__botao:checked + .container__rotulo{
+    background: var(--azul-degrade);
+}
 .cabecalho__menu-hamburguer {
     width: 24px;
     height: 24px;
@@ -55,9 +60,11 @@ body {
 .container__img {
     padding: 0.8rem;
 }
-.container__texto{
+
+.container__texto {
     display: none;
 }
+
 .lista-menu {
     display: none;
     position: absolute;
@@ -293,7 +300,8 @@ hr {
     background-color: var(--branco);
     padding: 2.4rem;
 }
-.lista-rodape{
+
+.lista-rodape {
     display: none;
 }
 
@@ -314,6 +322,7 @@ hr {
     .container__titulo {
         font-weight: 400;
     }
+
     .opcoes {
         display: flex;
         gap: 1.6rem;
@@ -322,6 +331,7 @@ hr {
     .opcoes__item {
         text-transform: uppercase;
         cursor: pointer;
+        padding: 1rem;
     }
 
     .opcoes__link {
@@ -333,7 +343,12 @@ hr {
     .cabecalho__menu-hamburguer {
         display: none;
     }
-
+    .lista-menu{
+        top: 76%;
+    }
+    .lista-menu__item:first-child{
+        padding-top: 2.4rem;
+    }
     .lista-menu__item:hover {
         background: var(--azul-degrade);
     }
@@ -343,157 +358,257 @@ hr {
         -webkit-text-fill-color: var(--branco);
     }
 
-    /* .opcoes__botao:checked~label>.opcoes__item {
-        padding: 1rem;
-        background-color: red;
-    } */
-
+    .opcoes__botao:checked + .opcoes__rotulo >.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+    .opcoes__botao {
+        display: none;
+    }
     .opcoes__botao:checked~.lista-menu {
         display: block;
         width: auto;
     }
 
-    .opcoes__botao {
-        display: none;
-    }
-
     /* BANNER */
-    .banner__titulo{
+    .banner__titulo {
         font-size: 3.6rem;
     }
+
     /* .banner__texto{
         line-height: 2.4rem;
         margin: 0.2rem 0 2.6rem 0;
     } */
-    .banner__pesquisa{
+    .banner__pesquisa {
         width: 50%;
     }
-    .banner__pesquisa::placeholder{
+
+    .banner__pesquisa::placeholder {
         background-position: 10rem;
     }
 
     /* CARROSSEL */
-    .carrossel__titulo{
+    .carrossel__titulo {
         font-size: 2.6rem;
-        padding: 5.1rem 0 1.6rem 0 ;
+        padding: 5.1rem 0 1.6rem 0;
     }
-    .swiper-pagination{
+
+    .swiper-pagination {
         margin: 3.2rem 0 4.8rem 0;
     }
-    .swiper{
+
+    .swiper {
         width: 70%;
     }
+
     .swiper-slide img {
         width: 80%;
     }
-    .swiper-button-prev, .swiper-button-next{
+
+    .swiper-button-prev,
+    .swiper-button-next {
         display: block;
         top: 60%;
     }
-    .card{
+    .swiper-button-next {
+        right: 6%;
+    }
+    .card {
         width: 40%;
         margin: 6.1rem auto 4.8rem;
     }
+
     /* TÓPICOS */
-    .topicos{
+    .topicos {
         padding: 3.2rem;
     }
-    .topicos__titulo{
+
+    .topicos__titulo {
         font-size: 2.4rem;
         margin-bottom: 4rem
     }
-    .topicos__lista{
+
+    .topicos__lista {
         gap: 2.4rem;
     }
+
     .topicos__item {
         padding: 2.4rem 3.2rem;
     }
-    .topicos__link{
+
+    .topicos__link {
         font-size: 2.4rem;
     }
+
     /* CONTATOS */
-    .contato{
+    .contato {
         padding: 3rem 0 5.3rem;
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto;                    
+        grid-template-rows: auto auto;
         justify-content: center;
         align-items: center;
         /* column-gap: 4rem; */
     }
-    .contato__descricao{
+
+    .contato__descricao {
         width: 376px;
     }
-    .contato__titulo{
+
+    .contato__titulo {
         font-size: 2.4rem;
         margin-bottom: 1.9rem;
     }
-    .contato__texto{
+
+    .contato__texto {
         margin: 0;
     }
-    .contato__email{
+
+    .contato__email {
         padding: 1rem 2.4rem;
         height: 2rem;
         width: auto;
         min-width: 32rem;
         max-width: 35rem;
     }
-    .contato__email::placeholder{
+
+    .contato__email::placeholder {
         font-size: 1.6rem;
         background-position: 2.4rem;
     }
+
     /* RODAPE */
-    .rodape{
+    .rodape {
         display: flex;
         padding: 5.6rem 0 7rem 0;
         justify-content: space-around;
     }
-    .rodape__titulo{
+
+    .rodape__titulo {
         font-size: 2.4rem;
     }
-    .lista-rodape{
+
+    .lista-rodape {
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
     }
-    .lista-rodape>.lista-rodape__titulo{
+
+    .lista-rodape>.lista-rodape__titulo {
         margin-bottom: 2.5rem;
     }
-    .lista-rodape__titulo{
+
+    .lista-rodape__titulo {
         font-size: 1.4rem;
         color: var(--cinza-claro);
     }
-    .lista-rodape__item{
+
+    .lista-rodape__item {
         display: flex;
         align-items: center;
         gap: 0.8rem;
     }
-    .lista-rodape__link{
+
+    .lista-rodape__link {
         text-decoration: none;
         font-size: 1.4rem;
         color: var(--cinza-escuro);
     }
 }
-@media screen and (min-width: 1728px){
+
+@media screen and (min-width: 1728px) {
+
     /* HEADER */
-    .cabecalho{
+    .cabecalho {
         padding: 0 8rem;
     }
-    .container__titulo{
+
+    .container__titulo {
         margin-right: 5.7rem;
     }
-    .container__link{
+
+    .container__link {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
         text-decoration: none;
     }
-    .container__texto{
+
+    .container__texto {
         display: block;
         font-size: 2rem;
         color: var(--preto);
     }
-    .opcoes{
-        margin-right: auto;/* quando temos um item-flex e utilizamos o margin(qualquer direção), com o valor auto, a margin tentara preencher todo o espaço disponivel enviando os item para o lado oposto o da direção declarada */
+
+    .opcoes {
+        margin-right: auto;
+        /* quando temos um item-flex e utilizamos o margin(qualquer direção), com o valor auto, a margin tentara preencher todo o espaço disponivel enviando os item para o lado oposto o da direção declarada */
+    }
+
+    /* BANNER */
+    .banner {
+        padding: 8.4rem 0;
+    }
+
+    .banner__texto {
+        margin: 0.2rem 0 2.6rem 0;
+    }
+
+    .banner__pesquisa {
+        padding: 1rem 2.4rem;
+        max-width: 586px;
+        line-height: 3.6rem;
+    }
+
+    .banner__pesquisa::placeholder {
+        font-size: 1.6rem;
+    }
+
+    /* CARROSSEL */
+    .carrossel__container {
+        display: flex;
+        padding: 7.4rem 17.5rem 11.4rem;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        width: 65%;
+    }
+    .swiper-button-next {
+        right: 10%;
+    }
+    .card {
+        margin: 0;
+        width: 50%;
+        height: 24.6rem;
+        align-self: flex-end;
+    }
+
+    .descricao__titulo {
+        font-size: 3.2rem;
+    }
+
+    .descricao__titulo-livro {
+        margin: 0.1rem 0 0.8rem 0;
+    }
+
+    .descricao__texto {
+        font-size: 1.6rem;
+    }
+    /* TÓPICOS */
+    .topicos{
+        padding: 6.4rem 0 7.4rem;
+    }
+    .topicos__titulo{
+        font-size: 3.2rem;
+    }
+    .topicos__lista{
+        width: 50%;
+        margin: 0 auto;
+    }
+    /* RODAPÉ */
+    .lista-rodape{
+        padding-left: 2rem;
+        border-left: 2px solid var(--cinza-claro);
     }
 }
