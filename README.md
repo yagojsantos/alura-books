@@ -7,10 +7,11 @@
 | -------------  | --- |
 | :sparkles: Nome        | **Alura Books**
 | :label: Tecnologias | HTML, CSS
-| :rocket: URL         | https://alura-books-six-orcin.vercel.app/
+| :rocket: URL         | https://alura-books-six-orcin.vercel.app/ ou https://yagojsantos.github.io/alura-books/
 | :memo: Figma Project         | https://www.figma.com/file/2RDClcEbbMhgGlhvk092Hh/AluraBooks-(Copy)?type=design&node-id=37-94&t=JPpDXfQitRd1ckLG-0
 
 <img width="50%" src="https://github.com/yagojsantos/alura-books/assets/119305146/8535a5a3-ab49-4887-8411-218a9f5e81c3">
+<img src="https://github.com/yagojsantos/alura-books/assets/119305146/d0026229-54e2-41ec-82e6-99e94914a6f6#vitrinedev" width="0px" alt="Capa do Projeto">
 
 ## Detalhes do projeto
 
